@@ -2,14 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Седона</title>
   </head>
   <body>
     <header>
       <nav>
         <a>
-          <img src="img/index-site-logo.svg" width="138" height="70" alt="Логотип">
+          <img src="img/site-logo.svg" width="138" height="70" alt="Логотип">
         </a>
         <ul>
           <li><a href="#">Информация</a></li>
@@ -34,7 +34,7 @@
             <h3>Настоящий городок</h3>
             <span>— №1 —</span>
             <p>Седона - не аттракцион для туристов, там <br> течёт своя жизнь</p>
-            <img src="http://xgu.ru" alt="Городской пейзаж" width="800" height="256">
+            <img src="img/index-city.jpg" alt="Городской пейзаж" width="800" height="256">
             <ul>
               <li>
                 <h3>Жилье</h3>
@@ -51,7 +51,7 @@
             </ul>
           </li>
           <li>
-            <img src="http://xgu.ru" alt="Пейзаж каньона" width="800" height="256">
+            <img src="img/index-canyon.jpg" alt="Пейзаж каньона" width="800" height="256">
             <h3>Там есть Мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно <br> осмелитесь</p>
@@ -78,8 +78,26 @@
         <p>Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <div>
-          <button>Поиск гостиницы в седоне</button>
-          <!--Место для формы посика-->
+          <button type="button">Поиск гостиницы в седоне</button>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div>
+              <label for="date-in">Дата заезда:</label>
+              <input type="date" name="date-in" id="date-in" value="2017-04-24" required>
+            </div>
+            <div>
+              <label for="date-out">Дата выезда:</label>
+              <input type="date" name="date-out" id="date-out" value="2017-07-04" required>
+            </div>
+            <div>
+              <label for="adults">Возраст:</label>
+              <input type="number" name="adults" value="2" id="adults">
+            </div>
+            <div>
+              <label for="kids">Дети:</label>
+              <input type="number" name="kids" value="0" id="kids">
+            </div>
+            <input type="submit" name="find" value="Найти">
+          </form>
         </div>
       </section>
       <section>
@@ -99,7 +117,7 @@
         </ul>
       </section>
       <section>
-        <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.svg" width="115" height="41" alt=""></a></p>
+        <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.svg" width="115" height="41" alt="Логотип HTML Acadamy"></a></p>
       </section>
     </footer>
   </body>
