@@ -7,85 +7,85 @@
     </head>
   <body>
     <header>
-      <nav>
+      <nav class="site-navigation">
         <a href="index.html">
           <img src="img/site-logo.svg" width="138" height="70" alt="Логотип">
         </a>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостинницы</a></li>
+        <ul class="navigation-list">
+          <li class="navigation-item"><a href="#">Информация</a></li>
+          <li class="navigation-item"><a href="#">Фото и видео</a></li>
+          <li class="navigation-item"><a href="#">Карта штата</a></li>
+          <li class="navigation-item"><a href="#">Гостинницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1 class="visualy-hidden">Страница выбора отелей</h1>
-      <section>
+      <section class="filter-block">
         <h2 class="visualy-hidden">Форма фильтра</h2>
         <!--Место для фильтра-->
         <p>Найдено:3<span></span></p>
         <p><!--Счетчик найденных отелей--></p>
         </section>
-        <section>
-        <ul>
+        <section class="sorting-block">
+        <ul class="sorting-list">
           <li>Сотрировка:</li>
           <li><a href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По рейтингу</a></li>
-          <li><a href="#">Сотрировка по убыванию</a></li>
-          <li><a href="#">Сотрировка по возрастанию</a></li>
+          <li class="sorting-arow-up"><a href="#">Сотрировка по убыванию</a></li>
+          <li class="sorting-arow-down"><a href="#">Сотрировка по возрастанию</a></li>
         </ul>
       </section>
       <section>
         <h2 class="visualy-hidden">Список отелей</h2>
-        <ul>
-          <li>
+        <ul class="hotels-list">
+          <li class="hotels-item">
             <img src="img/hotels-amara.jpg" width="135" height="90" alt="Картинка отеля Amara Resort & Spa">
             <h3><a href="#">Amara Resort & Spa</a></h3>
             <p>Гостинница</p>
             <p>от 4000р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button-details" href="#">Подробнее</a>
+            <a class="button-booking" href="#">Забронировать</a>
             <p>5 звезд</p>
-            <p>Рейтинг: 8,5</p>
+            <p class="rating">Рейтинг: 8,5</p>
           </li>
-          <li>
+          <li class="hotels-item">
             <img src="img/hotels-desert.jpg" width="135" height="90" alt="Картинка отеля Desert Quail Inn">
             <h3><a href="#">Desert Quail Inn</a></h3>
             <p>Мотель</p>
             <p>от 3000р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button-details" href="#">Подробнее</a>
+            <a class="button-booking" href="#">Забронировать</a>
             <p>3 звезды</p>
-            <p>Рейтинг: 8,9</p>
+            <p class="rating">Рейтинг: 8,9</p>
           </li>
-          <li>
+          <li class="hotels-item">
             <img src="img/hotels-villas.jpg" width="135" height="90" alt="Картинка отеля Villas at Poco Diablo">
             <h3><a href="#">Villas at Poco Diablo</a></h3>
             <p>Апартаменты</p>
             <p>от 2000р.</p>
-            <a href="#">Подробнее</a>
-            <a href="#">Забронировать</a>
+            <a class="button-details" href="#">Подробнее</a>
+            <a class="button-booking" href="#">Забронировать</a>
             <p>2 звезды</p>
-            <p>Рейтинг: 9,2</p>
+            <p class="rating">Рейтинг: 9,2</p>
           </li>
         </ul>
       </section>
     </main>
     <footer>
-      <section>
+      <section class="contacts">
         <p>#VISITSEDONA <br>
         ТЕЛ:<a href="tel:+74956660166">+7(495)666-01-66</a></p>
       </section>
-      <section>
+      <section class="socials">
         <ul>
           <li><a href="#"><img src="img/footer-twitter.svg" width="46" height="48" alt="Twitter"></a></li>
           <li><a href="#"><img src="img/footer-fb.svg" width="46" height="48" alt="Facebook"></a></li>
           <li><a href="#"><img src="img/footer-youtube.svg" width="46" height="48" alt="Youtube"></a></li>
         </ul>
       </section>
-      <section>
+      <section class="html-logo">
         <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.svg" width="115" height="41" alt="Логотип HTML Acadamy"></a></p>
       </section>
     </footer>

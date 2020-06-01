@@ -1,1 +1,234 @@
+:root {
+  --basic-black: #000000;
+  --basic-blue: #81B3D2;
+  --basic-grey: #EBEBEB;
+  --basic-brown: #766357;
+  --basic-white: #ffffff;
+  --hover-brown: #604E43;
+  --active-brown: #503E33;
+  --hover-blue: #669EC0;
+  --active-blue: #5496BD;
 
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visualy-hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none; /*Убрать класс после оформления форм*/
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-item a {
+  color: var(--basic-black);
+  font-weight: bold;
+}
+
+/*Начало стилей index.html*/
+
+.welcome {
+  background: url("../img/index-shape.svg") center bottom no-repeat, url("../img/index-background-photo.jpg") center no-repeat;
+  background-color: var(--basic-black);
+  width: 1200px;
+  height: 509px;
+}
+
+.welcome img {
+  display: block;
+  margin: 0 auto;
+}
+
+.features-block {
+  line-height: 21px;
+}
+
+.features-block h2 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-list h3 {
+  font-size: 21px;
+}
+
+.list-item-blue {
+  line-height: 21px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.benefits-list {
+  color: var(--basic-black);
+  list-style: none;
+  background-color: var(--basic-white);
+}
+
+.benefits-list-house {
+  background: url("../img/index-house-icon.svg") top no-repeat;
+}
+
+.benefits-list-food {
+  background: url("../img/index-burger-icon.svg") top no-repeat;
+}
+
+.benefits-list-present {
+  background: url("../img/index-present-icon.svg") top no-repeat;
+}
+
+.list-item-grey {
+  background-color: var(--basic-grey);
+}
+
+.offer-block h2 {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.form-button {
+  color: var(--basic-white);
+  background-color: var(--basic-brown);
+  text-transform: uppercase;
+  text-align: center;
+  font: inherit;
+  border: none;
+}
+
+.form-button:hover {
+  background-color: var(--hover-brown);
+}
+
+.form-button:active {
+  background-color: var(--active-brown);
+}
+
+/*Начало стилей hotels*/
+
+.filter-block p {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.sorting-block li {
+  list-style: none;
+}
+
+.sorting-list a{
+  color: var(--basic-grey);
+  font-size:12px;
+  line-height:18px;
+  border-bottom:1px dotted var(--basic-blue);
+}
+
+.sorting-list a:hover {
+  color: var(--basic-blue);
+}
+
+.sorting-list a:active {
+  color: var(--basic-black);
+}
+
+.hotels-list {
+  list-style: none;
+}
+
+.hotels-item h3 {
+  font-size:21px;
+  line-height:26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.hotels-item p {
+  line-height: 21px;
+}
+
+.rating {
+  background-color: var(--basic-grey);
+}
+
+.hotels-item h3:hover {
+  color: var(--basic-blue);
+}
+
+.hotels-item h3:active {
+  color: var(--basic-grey);
+}
+
+.button-details {
+  background-color: var(--basic-blue);
+  border: none;
+  color: var(--basic-white);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button-details:hover {
+  background-color: var(--hover-blue);
+}
+
+.button-details:active {
+  background-color: var(--active-blue);
+}
+
+.button-booking {
+  background-color: var(--basic-brown);
+  border: none;
+  color: var(--basic-white);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button-booking:hover {
+  background-color: var(--hover-brown);
+}
+
+.button-booking:active {
+  background-color: var(--active-brown);
+}
+
+
+/*Начало стилей footer*/
+
+.contacts {
+  font-weight: bold;
+  line-height: 26px;
+  font-size: 21px;
+}
+
+.socials ul {
+  list-style: none;
+}
+
+.html-logo {
+  line-height: 26px;
+}

@@ -7,94 +7,99 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="site-navigation">
         <a>
           <img src="img/site-logo.svg" width="138" height="70" alt="Логотип">
         </a>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="hotels.html">Гостинницы</a></li>
+        <ul class="navigation-list">
+          <li class="navigation-item"><a href="#">Информация</a></li>
+          <li class="navigation-item"><a href="#">Фото и видео</a></li>
+          <li class="navigation-item"><a href="#">Карта штата</a></li>
+          <li class="navigation-item"><a href="hotels.html">Гостинницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1 class="visualy-hidden">Седона, отели, купи!</h1>
-      <section>
+      <section class="welcome">
         <h2 class="visualy-hidden">Картинка</h2>
         <img src="img/index-welcome.svg" width="456" height="350" alt="Welcome to the gorjeous SEDONA Becouse the Grand Canyon sucks!">
       </section>
-
-      <section>
+      <section class="features-block">
         <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
-        <ol>
-          <li>
+        <ol class="advantages-list">
+          <li class="list-item-blue">
             <h3>Настоящий городок</h3>
             <span>— №1 —</span>
             <p>Седона - не аттракцион для туристов, там <br> течёт своя жизнь</p>
             <img src="img/index-city.jpg" alt="Городской пейзаж" width="800" height="256">
-            <ul>
-              <li>
+            <ul class="benefits-list">
+              <li class="benefits-list-house">
                 <h3>Жилье</h3>
                 <p> Рекомендуем пожить в настоящем <br>  мотеле, всё как в кино!</p>
               </li>
-              <li>
+              <li class="benefits-list-food">
                 <h3>Еда</h3>
                 <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
               </li>
-              <li>
+              <li class="benefits-list-present">
                 <h3>Сувениры</h3>
                 <p> Не только китайского, но и местного <br> производства!</p>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="list-item-blue">
             <img src="img/index-canyon.jpg" alt="Пейзаж каньона" width="800" height="256">
             <h3>Там есть Мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно <br> осмелитесь</p>
           </li>
-          <li>
+          <li class="list-item-grey">
           <h3>Небольшая площадь</h3>
           <span>— №3 —</span>
             <p>все достопримечательности <br> находятся очень близко</p>
           </li>
-          <li>
+          <li class="list-item-grey">
             <h3>Красивая дорога</h3>
             <span>— №4 —</span>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="list-item-grey">
             <h3>Мало туристов</h3>
             <span>— №5 —</span>
             <p>большинство едет в гранд каньон и толпится там</p>
           </li>
         </ol>
       </section>
-      <section>
+      <section class="offer-block">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <div>
-          <button type="button">Поиск гостиницы в седоне</button>
+        <button class="form-button" type="button">Поиск гостиницы в седоне</button>
+        <div class="none">
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
               <label for="date-in">Дата заезда:</label>
               <input type="date" name="date-in" id="date-in" value="2017-04-24" required>
+              <button type="button" name="button"><img src="img/index-calendar.svg" alt="Выберите дату заезда"></button>
             </p>
             <p>
               <label for="date-out">Дата выезда:</label>
               <input type="date" name="date-out" id="date-out" value="2017-07-04" required>
+              <button type="button" name="button"><img src="img/index-calendar.svg" alt="Выберите дату выезда"></button>
             </p>
             <p>
               <label for="adults">Возраст:</label>
               <input type="number" name="adults" value="2" id="adults">
+              <button type="button" name="button"><img src="img/index-plus.svg" alt="увеличить число"></button>
+              <button type="button" name="button"><img src="img/index-minus.svg" alt="уменьшить число"></button>
             </p>
             <p>
               <label for="kids">Дети:</label>
               <input type="number" name="kids" value="0" id="kids">
+              <button type="button" name="button"><img src="img/index-plus.svg" alt="Увеличить число"></button>
+              <button type="button" name="button"><img src="img/index-minus.svg" alt="Уменьшить число"></button>
             </p>
             <button type="submit">Найти</button>
           </form>
@@ -105,18 +110,18 @@
       </section>
     </main>
     <footer>
-      <section>
+      <section class="contacts">
         <p>#VISITSEDONA <br>
         ТЕЛ:<a href="tel:+74956660166">+7(495)666-01-66</a></p>
       </section>
-      <section>
+      <section class="socials">
         <ul>
           <li><a href="#"><img src="img/footer-twitter.svg" width="46" height="48" alt="Twitter"></a></li>
           <li><a href="#"><img src="img/footer-fb.svg" width="46" height="48" alt="Facebook"></a></li>
           <li><a href="#"><img src="img/footer-youtube.svg" width="46" height="48" alt="Youtube"></a></li>
         </ul>
       </section>
-      <section>
+      <section class="html-logo">
         <p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo.svg" width="115" height="41" alt="Логотип HTML Acadamy"></a></p>
       </section>
     </footer>
