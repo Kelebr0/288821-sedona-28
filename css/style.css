@@ -1,3 +1,17 @@
+@font-face {
+  font-family:"PT Sans";
+  font-weight:400;
+  font-style:normal;
+  src:local("PT Sans"),local("PTSans-Regular"),url("../fonts/ptsans.woff2") format("woff2"),url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family:"PT Sans";
+  font-weight:700;
+  font-style:normal;
+  src:local("PT Sans Bold"),local("PTSans-Bold"),url("../fonts/ptsansbold.woff2") format("woff2"),url("../fonts/ptsansbold.woff") format("woff");
+}
+
 :root {
   --basic-black: #000000;
   --basic-blue: #81B3D2;
@@ -8,7 +22,9 @@
   --active-brown: #503E33;
   --hover-blue: #669EC0;
   --active-blue: #5496BD;
-
+  --special-blue: #87B5D1;
+  --special-brown: #A9A09B;
+  --special-grey: #F2F2F2;
 }
 
 body {
@@ -31,6 +47,7 @@ img {
 
 a {
   text-decoration: none;
+  color:inherit;
 }
 
 .visualy-hidden {
@@ -45,9 +62,21 @@ a {
   list-style: none;
 }
 
-.navigation-item a {
+.navigation-item {
   color: var(--basic-black);
   font-weight: bold;
+}
+
+.current {
+  color: var(--basic-brown);
+}
+
+.navigation-item:hover {
+  color: var(--basic-blue);
+}
+
+.navigation-item:active {
+  color: var(--basic-grey);
 }
 
 /*Начало стилей index.html*/
@@ -59,7 +88,7 @@ a {
   height: 509px;
 }
 
-.welcome img {
+.welcome-img {
   display: block;
   margin: 0 auto;
 }
@@ -68,7 +97,7 @@ a {
   line-height: 21px;
 }
 
-.features-block h2 {
+.features-block-title {
   font-size: 21px;
   font-weight: bold;
 }
@@ -77,12 +106,15 @@ a {
   list-style: none;
 }
 
-.advantages-list h3 {
+.advantages-list-title {
   font-size: 21px;
 }
 
-.list-item-blue {
-  line-height: 21px;
+.advantages-item {
+  background-color: var(--basic-grey);
+}
+
+.advantages-item-blue {
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
@@ -105,11 +137,7 @@ a {
   background: url("../img/index-present-icon.svg") top no-repeat;
 }
 
-.list-item-grey {
-  background-color: var(--basic-grey);
-}
-
-.offer-block h2 {
+.offer-block-title {
   font-size: 30px;
   line-height: 24px;
 }
@@ -129,46 +157,85 @@ a {
 
 .form-button:active {
   background-color: var(--active-brown);
+  color: var(--special-brown);
 }
+
+.form-label {
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.form-input {
+  background-color: var(--special-grey);
+}
+
+.form-input:hover {
+  background-color: var(--basic-grey);
+}
+
+.form-input:focus {
+  background-color: var(--basic-white);
+}
+
+.form-find-button {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  font: inherit;
+}
+
+.form-find-button:hover {
+  background-color: var(--hover-blue);
+}
+
+.form-find-button:active {
+  background-color: var(--active-blue);
+  color: var(--special-blue);
+}
+
+
 
 /*Начало стилей hotels*/
 
-.filter-block p {
+.filter-block-text {
   font-size: 21px;
   font-weight: bold;
 }
 
-.sorting-block li {
+.sorting-list {
   list-style: none;
 }
 
-.sorting-list a{
+.sorting-condition{
   color: var(--basic-grey);
   font-size:12px;
   line-height:18px;
   border-bottom:1px dotted var(--basic-blue);
 }
 
-.sorting-list a:hover {
+.sorting-condition:hover {
   color: var(--basic-blue);
 }
 
-.sorting-list a:active {
+.sorting-condition:active {
   color: var(--basic-black);
+  border-bottom: none;
 }
 
 .hotels-list {
   list-style: none;
 }
 
-.hotels-item h3 {
+.hotels-title {
   font-size:21px;
   line-height:26px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.hotels-item p {
+.hotels-item {
   line-height: 21px;
 }
 
@@ -176,11 +243,11 @@ a {
   background-color: var(--basic-grey);
 }
 
-.hotels-item h3:hover {
+.hotels-title:hover {
   color: var(--basic-blue);
 }
 
-.hotels-item h3:active {
+.hotels-title:active {
   color: var(--basic-grey);
 }
 
@@ -198,6 +265,7 @@ a {
 
 .button-details:active {
   background-color: var(--active-blue);
+  color: var(--special-blue);
 }
 
 .button-booking {
@@ -214,6 +282,7 @@ a {
 
 .button-booking:active {
   background-color: var(--active-brown);
+  color: var(--special-brown);
 }
 
 
@@ -225,7 +294,7 @@ a {
   font-size: 21px;
 }
 
-.socials ul {
+.socials {
   list-style: none;
 }
 
