@@ -27,9 +27,15 @@
   --special-grey: #F2F2F2;
 }
 
+html {
+  height: 100%;
+}
+
 .site-body {
+  min-width: 1200px;
   background-color: var(--special-grey);
   text-transform: uppercase;
+  height: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -37,8 +43,11 @@
 }
 
 .container {
-  max-width: 1200px;
-  min-width:768px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  width: 1200px;
   margin: 0 auto;
   padding: 0;
   color: var(--basic-black);
@@ -48,7 +57,6 @@
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 a {
@@ -56,8 +64,17 @@ a {
   color:inherit;
 }
 
-.visualy-hidden {
-  visibility: hidden;
+.visuallyhidden:not(:focus):not(:active), input[type="radio"], input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .none {
@@ -70,30 +87,49 @@ a {
 }
 
 .navigation-logo {
+  position: absolute;
+  margin-left: 541px;
+  text-align: center;
 }
 
 .navigation-list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   flex-grow: 1;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .navigation-item {
   color: var(--basic-black);
   font-weight: bold;
-  width: auto;
+  width: 20%;
+  text-align: right;
 }
+
+.navigation-item:first-child {
+  margin-left: 72px;
+  text-align: left;
+}
+
+.navigation-item:nth-child(2) {
+  text-align: left;
+}
+
+.navigation-item:last-child {
+  margin-right: 72px;
+}
+
 
 .current {
   color: var(--basic-brown);
 }
 
-.navigation-item:hover {
+.navigation-link:hover {
   color: var(--basic-blue);
 }
 
-.navigation-item:active {
+.navigation-link:active {
   color: var(--basic-grey);
 }
 
@@ -111,6 +147,7 @@ a {
 .welcome-img {
   display: block;
   margin: 0 auto;
+  padding: 60px;
 }
 
 .features-block {
@@ -125,10 +162,9 @@ a {
 
 .advantages-list {
   list-style: none;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
-  grid-template-columns: 400px 400px 400px;
-  grid-template-rows: auto auto 256px;
 }
 
 .advantages-list-title {
@@ -139,70 +175,60 @@ a {
 .advantages-item {
   background-color: var(--basic-grey);
   text-align: center;
-  grid-row-start: 3;
-  grid-row-end 4;
+  width: 33%;
+  min-height: 256px;
+  align-content: center;
+
 }
 
 .advantages-item-blue {
   background-color: var(--basic-blue);
   color: var(--basic-white);
   text-align: center;
-  display: grid;
-  grid-template-columns: 400px 800px;
-  grid-row-start: 1;
-  grid-row-end: 2;
-
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.advantages-item-blue:nth-child(2) {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-.advantages-city {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  margin: auto;
+.advantages {
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .advantages-city-img {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  width: 66%;
+  align-self: flex-start;
 }
 
 .benefits-list {
   color: var(--basic-black);
   list-style: none;
   background-color: var(--basic-white);
-  grid-column-start: 1;
-  grid-column-end: 4;
   display: flex;
-  justify-content: space-around;
   flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
 }
 
-.benefits-list-house {
-  background: url("../img/index-house-icon.svg") top no-repeat;
-  padding-top: 165px;
-  align-self: center;
+.icon-house {
+  background: url("../img/index-house-icon.svg") top center no-repeat;
 }
 
-.benefits-list-food {
-  background: url("../img/index-burger-icon.svg") top no-repeat;
-  padding-top: 165px;
-  align-self: flex-end;
+.icon-food {
+  background:url("../img/index-burger-icon.svg") top no-repeat
 }
 
-.benefits-list-present {
-  background: url("../img/index-present-icon.svg") top no-repeat;
-  padding-top: 165px;
-  align-self: center;
+.icon-present {
+  background:url("../img/index-present-icon.svg") top center no-repeat;
+}
+
+
+.benefits-list-item {
+  position: relative;
+  width:33%;
+  text-align:center;
+  padding-top: 100px;
 }
 
 .offer-block {
@@ -218,12 +244,14 @@ a {
   color: var(--basic-white);
   background-color: var(--basic-brown);
   text-transform: uppercase;
-  font-size: 21px;
   line-height: 26px;
   text-align: center;
   font: inherit;
+  font-size: 21px;
+  font-weight: bold;
   border: none;
   width:568px;
+  padding: 31px 0;
 }
 
 .form-button:hover {
@@ -236,21 +264,33 @@ a {
 }
 
 .form-hotels {
-  width: 568px;
+  top:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  padding:0 55px;
+  box-shadow:0 7px 15px rgba(0,1,1,0.15);
+  height: 395px;
 }
 
 .form-hotels-group {
   display:flex;
   margin:0;
   margin-bottom:30px;
-  font-weight:700
+  font-weight:700;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
+
+.form-hotels-group:nth-child(3) .form-input {
+  border: red solid;
+  width: 20%;
 }
 
 .container-form-hotels {
-  position:relative;
+  margin:0 auto;
   width:568px;
 }
 
@@ -262,11 +302,18 @@ a {
 .form-label {
   font-weight: bold;
   font-family: inherit;
+  padding-right: 20px;
 }
 
 .form-input {
   background-color: var(--special-grey);
   flex-grow: 1;
+  padding:5px 13px;
+  font-size:14px;
+  font-weight:700;
+  line-height:26px;
+  text-transform:uppercase;
+  border:none;
 }
 
 .form-input:hover {
@@ -284,6 +331,10 @@ a {
   text-transform: uppercase;
   text-align: center;
   font: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  width: 458px;
+  padding: 16px 0;
 }
 
 .form-find-button:hover {
@@ -313,6 +364,7 @@ a {
 
 .filter-form {
   display: flex;
+  padding:27px 6% 10px;
 }
 
 .form-item {
@@ -326,8 +378,47 @@ a {
   font-weight: bold;
 }
 
+.form-item li {
+  list-style: none;
+  margin-bottom:20px
+}
+
 .form-item label {
   line-height: 21px;
+  position:relative;
+  display:block;
+  padding-left:40px;
+}
+
+/*NACHALO stradaniy*/
+
+.form-item input+label::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:23px;
+  height:23px;
+  border:2px solid var(--basic-white);
+  border-radius:3px;
+}
+
+.form-item input:checked+label::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:27px;
+  height:23px;
+  background:url(../img/hotels-checkbox-on.svg) no-repeat;
+}
+
+
+/*Konec stradaniy*/
+
+.sorting-block {
+  display: flex;
+  align-items: center;
 }
 
 .filter-block-text {
@@ -337,6 +428,9 @@ a {
 
 .sorting-list {
   list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .sorting-condition{
@@ -355,19 +449,54 @@ a {
   border-bottom: none;
 }
 
+.sorting-arow-up {
+  position: relative;
+  display: inline-block;
+  width:11px;
+  height:10px;
+  background:url(../img/hotels-triangle-up.svg) no-repeat;
+}
+
+.sorting-arow-down {
+  position: relative;
+  display: inline-block;
+  width:11px;
+  height:10px;
+  background:url(../img/hotels-triangle-down.svg) no-repeat;
+}
+
+
 .hotels-list {
   list-style: none;
 }
 
+.hotels-item {
+  line-height: 21px;
+  display:flex;
+  height:150px;
+  padding:30px 6%;
+  border-bottom:1px solid var(--special-grey);
+  flex-grow: 1;
+}
+
+.hotels-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .hotels-title {
+  display: inline-block;
   font-size:21px;
   line-height:26px;
   font-weight: bold;
   color: var(--basic-black);
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
-.hotels-item {
-  line-height: 21px;
+.hotels-type {
+  display: inline-block;
 }
 
 .rating {
@@ -383,11 +512,15 @@ a {
 }
 
 .button-details {
+  display:inline-block;
+  padding:6px 17px;
   background-color: var(--basic-blue);
   border: none;
   color: var(--basic-white);
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
+  height: 27px;
 }
 
 .button-details:hover {
@@ -400,6 +533,9 @@ a {
 }
 
 .button-booking {
+  height: 27px;
+  display:inline-block;
+  padding:6px 17px;
   background-color: var(--basic-brown);
   border: none;
   color: var(--basic-white);
@@ -420,9 +556,10 @@ a {
 /*Начало стилей footer*/
 
 .site-footer {
+  min-height: 120px;
   display: flex;
   justify-content: space-around;
-
+  align-items: center;
 }
 
 .contacts {
@@ -436,9 +573,14 @@ a {
   display: grid;
   gap: 6px;
   grid-template-columns: auto auto auto;
-  grid
 }
 
 .html-logo {
+  display: flex;
+  align-items: center;
   line-height: 26px;
+}
+
+.html-logo p {
+  margin-right: 8px;
 }

@@ -10,21 +10,21 @@
     <div class="container">
       <header>
         <nav class="site-navigation">
-          <a href="index.html">
+          <a class="navigation-logo" href="index.html">
             <img src="img/site-logo.svg" width="138" height="70" alt="Логотип">
           </a>
           <ul class="navigation-list">
-            <li><a class="navigation-item" href="#">Информация</a></li>
-            <li><a class="navigation-item" href="#">Фото и видео</a></li>
-            <li><a class="navigation-item" href="#">Карта штата</a></li>
-            <li><a class="navigation-item current" href="#">Гостинницы</a></li>
+            <li class="navigation-item"><a class="navigation-link" href="#">Информация</a></li>
+            <li class="navigation-item"><a class="navigation-link" href="#">Фото и видео</a></li>
+            <li class="navigation-item"><a class="navigation-link" href="#">Карта штата</a></li>
+            <li class="navigation-item"><a class="navigation-link current" href="#">Гостинницы</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <h1 class="visualy-hidden">Страница выбора отелей</h1>
+        <h1 class="visuallyhidden">Страница выбора отелей</h1>
         <section class="filter">
-    			<h2 class="visualy-hidden">Фильтр гостинниц</h2>
+    			<h2 class="visuallyhidden">Фильтр гостинниц</h2>
     			<form class="filter-form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
     				<fieldset class="form-item">
     					<legend>Инфраструктура:</legend>
@@ -62,44 +62,41 @@
   	  				</ul>
   	  			</fieldset>
             <div class="filter-range">
-    					<p>Стоимость в сутки (Р):</p>
-    					<div>
-    						<label>
-    							от <input type="text" name="min-price" value="0">
-    						</label>
-    						<label>до <input type="text" name="max-price" value="3000"></label>
-    					</div>
-    					<button>Показать</button>
+    					<p class="range-label">Стоимость в сутки (Р):</p>
+    					<button class="btn-transparent">Показать</button>
     				</div>
     			</form>
     		</section>
-        <section class="filter-results">
-          <h2 class="visualy-hidden">Форма фильтра</h2>
-          <p class="filter-block-text">Найдено:3<span></span></p>
-          <p><!--Счетчик найденных отелей--></p>
-          </section>
-          <section class="sorting-block">
+        <section class="sorting-block">
+          <h2 class="visuallyhidden">Форма фильтра</h2>
+          <p class="filter-block-text">Найдено:3<span><!--Счетчик найденных отелей--></span></p>
           <ul class="sorting-list">
             <li>Сотрировка:</li>
             <li><a class="sorting-condition" href="#">По цене</a></li>
             <li><a class="sorting-condition" href="#">По типу</a></li>
             <li><a class="sorting-condition" href="#">По рейтингу</a></li>
-            <li class="sorting-arow-up"><a class="sorting-condition" href="#">Сотрировка по убыванию</a></li>
-            <li class="sorting-arow-down"><a class="sorting-condition" href="#">Сотрировка по возрастанию</a></li>
+            <li class=""><a class="sorting-arow-up" href="#"></a></li>
+            <li class=""><a class="sorting-arow-down" href="#"></a></li>
           </ul>
         </section>
         <section>
-          <h2 class="visualy-hidden">Список отелей</h2>
+          <h2 class="visuallyhidden">Список отелей</h2>
           <ul class="hotels-list">
             <li class="hotels-item">
               <img src="img/hotels-amara.jpg" width="135" height="90" alt="Картинка отеля Amara Resort & Spa">
-              <h3 class="hotels-title"><a href="#">Amara Resort & Spa</a></h3>
-              <p>Гостинница</p>
-              <p>от 4000р.</p>
-              <a class="button-details" href="#">Подробнее</a>
-              <a class="button-booking" href="#">Забронировать</a>
-              <p>5 звезд</p>
-              <p class="rating">Рейтинг: 8,5</p>
+              <div class="hotels-info">
+                <h3 class="hotels-title"><a href="#">Amara Resort & Spa</a></h3>
+                <div class="hotels-type">
+                  <p>Гостинница</p>
+                  <p>от 4000р.</p>
+                </div>
+                <a class="button-details" href="#">Подробнее</a>
+                <a class="button-booking" href="#">Забронировать</a>
+              </div>
+              <div class="hotels-rating">
+                <p>5 звезд</p>
+                <p class="rating">Рейтинг: 8,5</p>
+              </div>
             </li>
             <li class="hotels-item">
               <img src="img/hotels-desert.jpg" width="135" height="90" alt="Картинка отеля Desert Quail Inn">
