@@ -45,7 +45,6 @@ html {
 }
 
 .container {
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -911,9 +910,7 @@ a {
   border-bottom:1px solid var(--special-grey);
 }
 
-.sorting-block {
-  margin-bottom: 116px;
-}
+
 
 .hotels-info {
   margin-left: 29px;
@@ -1043,7 +1040,6 @@ a {
 
 .site-footer {
   position: relative;
-  margin-top: -120px;
   min-height: 120px;
   display: flex;
   justify-content: space-around;
@@ -1052,6 +1048,10 @@ a {
   box-sizing: border-box;
   padding-left: 45px;
   padding-right: 15px;
+}
+
+.footer-transparent {
+    margin-top: -120px;
 }
 
 .site-footer section {
