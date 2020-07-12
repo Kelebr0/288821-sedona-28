@@ -1,15 +1,15 @@
 @font-face {
-  font-family:"PT Sans";
-  font-weight:400;
-  font-style:normal;
-  src:local("PT Sans"),local("PTSans-Regular"),url("../fonts/ptsans.woff2") format("woff2"),url("../fonts/ptsans.woff") format("woff");
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("PT Sans"),local("PTSans-Regular"),url("../fonts/ptsans.woff2") format("woff2"),url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
-  font-family:"PT Sans";
-  font-weight:700;
-  font-style:normal;
-  src:local("PT Sans Bold"),local("PTSans-Bold"),url("../fonts/ptsansbold.woff2") format("woff2"),url("../fonts/ptsansbold.woff") format("woff");
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("PT Sans Bold"),local("PTSans-Bold"),url("../fonts/ptsansbold.woff2") format("woff2"),url("../fonts/ptsansbold.woff") format("woff");
 }
 
 :root {
@@ -62,7 +62,7 @@ img {
 
 a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 
 .visuallyhidden:not(:focus):not(:active), input[type="radio"] {
@@ -257,7 +257,7 @@ a {
   height: 70px;
   top: -20px;
   left: 135px;
-  background:url("../img/index-burger-icon.svg") top no-repeat
+  background: url("../img/index-burger-icon.svg") top no-repeat
 }
 
 .icon-present::before {
@@ -267,7 +267,7 @@ a {
   height: 77px;
   top: -24px;
   left: 155px;
-  background:url("../img/index-present-icon.svg") top center no-repeat;
+  background: url("../img/index-present-icon.svg") top center no-repeat;
 }
 
 
@@ -277,8 +277,8 @@ a {
   justify-content: center;
   align-content: center;
   position: relative;
-  width:33.333333%;
-  text-align:center;
+  width: 33.333333%;
+  text-align: center;
 }
 
 .benefits-list-item h3 {
@@ -339,7 +339,7 @@ a {
   font-size: 21px;
   font-weight: bold;
   border: none;
-  width:568px;
+  width: 568px;
   padding: 31px 0;
   margin-top: 26px;
 }
@@ -355,25 +355,25 @@ a {
 
 .container-form-hotels {
   position: relative;
-  margin:0 auto;
-  width:568px;
+  margin: 0 auto;
+  width: 568px;
 }
 
 .form-hotels {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   max-height: 395px;
   padding: 55px;
   padding-right: 34px;
   overflow: visible;
   background-color: var(--basic-white);
-  box-shadow:0 7px 15px rgba(0,1,1,0.15);
-  z-index:3;
+  box-shadow: 0 7px 15px rgba(0,1,1,0.15);
+  z-index: 3;
 }
 
 .form-hotels-group {
@@ -407,10 +407,10 @@ a {
 
 .form-input{
   width: 281px;
-  font-size:14px;
-  font-weight:700;
-  line-height:26px;
-  text-transform:uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
   background-color: var(--special-grey);
   margin-bottom: 20px;
   margin-left: 20px;
@@ -428,7 +428,7 @@ a {
   margin: 0;
 }
 
-.form-input[type="number"]  {
+.form-input[type="number"] {
   -moz-appearance: textfield;
   text-align:center;
   width: 35px;
@@ -445,7 +445,7 @@ a {
   border: var(--special-grey) solid 2px;
 }
 
-.form-label{
+.form-label {
   font-weight: 700;
   padding: 0;
   font-size: 14px;
@@ -552,8 +552,8 @@ a {
 
 .map {
   position: relative;
-  width:100%;
-  height:593px;
+  width: 100%;
+  height: 593px;
   overflow: hidden;
 }
 
@@ -568,7 +568,7 @@ a {
 
 .filter-form {
   display: flex;
-  padding:27px 6% 10px;
+  padding: 27px 6% 10px;
 }
 
 .form-item {
@@ -580,8 +580,8 @@ a {
 
 .form-item legend {
   margin-bottom: 24px;
-  font-size:16px;
-  line-height:21px;
+  font-size: 16px;
+  line-height: 21px;
   font-weight: bold;
 }
 
@@ -597,9 +597,9 @@ a {
 
 .form-item label {
   line-height: 21px;
-  position:relative;
-  display:block;
-  padding-left:40px;
+  position: relative;
+  display: block;
+  padding-left: 40px;
 }
 
 .form-item input {
@@ -611,107 +611,104 @@ a {
 
 .check-box:not(checked)::before {
   content: "";
-  position:absolute;
+  position: absolute;
   width: 23px;
   height: 23px;
   background-image: url(../img/hotels-checkbox-off.svg);
 }
 
 .check-box:checked::before {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:27px;
-  height:23px;
-  background:url(../img/hotels-checkbox-on.svg) no-repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  background: url(../img/hotels-checkbox-on.svg) no-repeat;
 }
 
 .check-box:disabled {
-  cursor:default;
+  cursor: default;
 }
 
 .check-box:disabled::before {
-  background:url(../img/hotels-disabled-checkbox-off.svg) no-repeat;
+  background: url(../img/hotels-disabled-checkbox-off.svg) no-repeat;
 }
 
 .check-box:checked:disabled::before {
-  background:url(../img/hotels-disabled-checkbox-on.svg) no-repeat;
+  background: url(../img/hotels-disabled-checkbox-on.svg) no-repeat;
 }
 
 .filter-range {
-  margin-left:auto;
-  width:318px
+  margin-left: auto;
+  width: 318px;
 }
 
 .range-label {
-  margin:0;
-  margin-bottom:10px;
-  font-size:16px;
-  line-height:21px;
-  font-weight:700
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
 }
 
 .price-controls {
   display: flex;
-  position:relative;
-  margin-bottom:20px;
-  height:36px;
-  font-size:0;
-  border:2px solid var(--basic-white);
-  border-radius:2px;
+  position: relative;
+  margin-bottom: 20px;
+  height: 36px;
+  font-size: 0;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
 }
 
 .price-controls::after {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:50%;
-  width:2px;
-  height:22px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
   background-color: var(--basic-white);
-  -webkit-transform:translate(-50%, -50%);
-  transform:translate(-50%, -50%)
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
 }
 
 .min-price {
-  display:inline-block;
-  width:50%;
+  display: inline-block;
+  width: 50%;
   padding-left: 34px;
-  font-size:14px;
-  line-height:30px;
-  text-align:center;
-  cursor:pointer
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer
 }
 
 .max-price {
-  display:inline-block;
-  width:50%;
+  display: inline-block;
+  width: 50%;
   padding-left: 8px;
-  font-size:14px;
-  line-height:30px;
-  text-align:center;
-  cursor:pointer
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer
 }
 
 .price-controls input {
-  margin:0;
-  width:50px;
-  color:inherit;
-  font:inherit;
-  background:none;
-  border:none;
+  margin: 0;
+  width: 50px;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  -moz-appearance: textfield;
+  text-align: left;
 }
 
 .price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.price-controls input  {
-  -moz-appearance: textfield;
-  text-align: left;
 }
 
 .range-controls {
@@ -831,15 +828,15 @@ a {
 
 .sorting-condition {
   color: var(--active-grey);
-  font-size:12px;
-  line-height:18px;
-  border-bottom:1px dotted var(--basic-blue);
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px dotted var(--basic-blue);
   margin-left: 32px;
 }
 
 .chosen {
   color: var(--basic-blue);
-  border:none;
+  border: none;
 }
 
 .sorting-condition:hover {
@@ -862,8 +859,8 @@ a {
 .sorting-arrow-up {
   position: relative;
   display: inline-block;
-  width:11px;
-  height:10px;
+  width: 11px;
+  height: 10px;
   margin-right: 10px;
   fill: var(--very-special-grey);
 }
@@ -871,8 +868,8 @@ a {
 .sorting-arrow-down {
   position: relative;
   display: inline-block;
-  width:11px;
-  height:10px;
+  width: 11px;
+  height: 10px;
   fill: var(--very-special-grey);
 }
 
@@ -906,8 +903,8 @@ a {
   line-height: 21px;
   max-height: 150px;
   display: flex;
-  padding:30px 6%;
-  border-bottom:1px solid var(--special-grey);
+  padding: 30px 6%;
+  border-bottom: 1px solid var(--special-grey);
 }
 
 
@@ -921,8 +918,8 @@ a {
 .hotels-title {
   display: inline-block;
   box-sizing: border-box;
-  font-size:21px;
-  line-height:26px;
+  font-size: 21px;
+  line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
   margin: 0;
@@ -992,7 +989,7 @@ a {
 }
 
 .button-details {
-  display:inline-block;
+  display: inline-block;
   max-width: 142px;
   margin-top: 16px;
   padding: 4px 17px;
@@ -1100,16 +1097,17 @@ a {
   height: 48px;
 }
 
-.socials-link:hover, .socials-link:focus {
+.socials-link:hover,
+.socials-link:focus {
   background-color: var(--hover-blue);
 }
 
 .socials-link:active {
-  background-color: var(--special-blue)
+  background-color: var(--special-blue);
 }
 
 .socials-link:active svg {
-  opacity: .3
+  opacity: .3;
 }
 
 .html-logo {
