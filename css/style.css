@@ -27,6 +27,7 @@
   --special-grey: #F2F2F2;
   --active-grey: #BDBBBC;
   --very-special-grey: #A9A9A9;
+  --disabled-grey: #6A6A6A;
 }
 
 html {
@@ -618,7 +619,7 @@ a {
   background-image: url(../img/hotels-checkbox-off.svg);
 }
 
-.form-item input:checked::before {
+.check-box:checked::before {
   content:"";
   position:absolute;
   top:0;
@@ -626,6 +627,18 @@ a {
   width:27px;
   height:23px;
   background:url(../img/hotels-checkbox-on.svg) no-repeat;
+}
+
+.check-box:disabled {
+  cursor:default;
+}
+
+.check-box:disabled::before {
+  background:url(../img/hotels-disabled-checkbox-off.svg) no-repeat;
+}
+
+.check-box:checked:disabled::before {
+  background:url(../img/hotels-disabled-checkbox-on.svg) no-repeat;
 }
 
 .filter-range {
